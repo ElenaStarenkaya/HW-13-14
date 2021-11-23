@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1 
+
+
+        class Circle {
+            radius;
+
+            radiusInfo() {
+                alert("Радиус окружности: " + this.radius)
+            }
+
+            newRadius(givenR) {
+                this.radius = givenR;
+            }
+
+            properties() {
+                let diameter = this.radius * 2;
+                let square = 3.14 * this.radius ** 2;
+                let circuit = Math.round(2 * 3.14 * this.radius);
+                alert("Диаметр окружности: " + diameter + "\nПлощадь окружности: " + square + "\nДлина окружности: " + circuit);
+            }
+
+            square(givenR) {
+                this.radius = givenR;
+                let square = 3.14 * this.radius ** 2;
+                alert("Площадь окружности: " + square);
+            }
+
+            circuit(givenR) {
+                this.radius = givenR;
+                let circuit = Math.round(2 * 3.14 * this.radius);
+                alert("Длина окружности: " + circuit);
+            }
+
+
+        };
+
+        var Ring = new Circle();
+        Ring.radius = 10;
+
+        Ring.radiusInfo();
+
+        Ring.newRadius(+prompt("Введите новый радиус:"));
+
+        Ring.properties();
+
+        Ring.square(+prompt("Введите радиус для вычисления площади окружности:"));
+
+        Ring.circuit(+prompt("Введите радиус для вычисления длины окружности:"));
+
+
+
+        // 2
+
+        class htmlElement {
+            name = "p";
+            closing = "true";
+            content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptas.";
+            arrOfNames = ["color", "font-style", "text-align"];
+            arrOfValues = ["yellow", "italic", "center"];
+
+            constructor (givenArr1, givenArr2){
+               this.arrOfNames =  givenArr1;
+               this.arrOfValues =  givenArr2;
+            }
+
+            addAttribute(newAtt, attValue){
+                
+            }
+        }
+
+
+
+
+
+    </script>
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptas. -->
+</body>
+
+</html>
